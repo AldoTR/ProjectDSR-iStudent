@@ -95,34 +95,36 @@ create table Docentes_Materias(
 --add constraint fk_num_per foreign key (numero_personal) references docentes (numero_personal)
 --add constraint fk_nrc foreign key (nrc) references materias (nrc)
 
-/*
+
 create table Cuentas_Docente(
    numero_personal int not null,
    correo varchar(100),
    contraseña varchar(100), 
-   url_imagen varchar(100),
+   url_imagen varchar(255),
    primary key (numero_personal)
-   );
- */
-/*
- create table Cuentas_Alumno(
+	);
+	
+select * from Cuentas_Docente
+	
+create table Cuentas_Alumno(
    id int not null,
    correo varchar(100),
    contraseña varchar(100), 
-   url_imagen varchar(100),
+   url_imagen varchar(255),
    primary key (id)
    );
-  */
-  
-/*
+   
+   
+   
+   
+select * from Cuentas_Alumno
+   
 ALTER Table Docentes 
 ADD Column facultad varchar(100)
-*/
+update docentes set facultad = 'Facultad de Negocios y Tecnologías'
+where facultad is null
+select * from Docentes
 
---insert into Docentes_Materias values ('101','91063')
-
---insert into Cuentas_Docente values ('101', 'JorgeGD@uv.mx','JorgeContraseña','enlace_imagen')
---insert into Cuentas_Alumno values ('1','zS20006781@estudiantes.uv.mx','AldoContraseña','enlace_imagen')
-
---update docentes set facultad = 'Facultad de Negocios y Tecnologías'
---where facultad is null
+insert into Docentes_Materias values ('101','91063')
+insert into Cuentas_Docente values ('101', 'JorgeGD@uv.mx','JorgeContraseña','enlace_imagen')
+insert into Cuentas_Alumno values ('1','zS20006781@estudiantes.uv.mx','AldoContraseña','enlace_imagen')
