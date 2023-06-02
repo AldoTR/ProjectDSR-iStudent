@@ -1,0 +1,93 @@
+ALTER TABLE cuentas_docente RENAME COLUMN contraseña TO contrasena;
+ALTER TABLE cuentas_docente ALTER COLUMN url_imagen TYPE character varying(255);
+ALTER TABLE Docentes_Materias
+ADD CONSTRAINT unique_nrc_per_num_personal UNIQUE (nrc);
+
+insert into docentes values ('01','Jorge Ernesto','Gonzalez Diaz',1236126713,2721234567,'Masculino','5 de agosto de 1980');
+insert into docentes values ('02','Adolfo','Centeno Tellez',1576912851,2719876543,'Masculino','15 de octubre de 1972');
+insert into docentes values ('03','Martín','Mancilla Gomez',1918671851,2722345678,'Masculino','20 de febrero de 1978');
+insert into docentes values ('04','Gabriel','Rodríguez Vazquez',1186970176,2718765432,'Masculino','8 de noviembre de 1980');
+insert into docentes values ('05','Ricardo','Carrera Hernandez',1756255912,2729876543,'Masculino','24 de marzo de 1970');
+insert into docentes values ('06','Adolfo','Rodriguez Parada',1918671970,2713456789,'Masculino','2 de agosto de 1975');
+
+ALTER TABLE materias
+ALTER COLUMN nombre TYPE character varying(40);
+
+INSERT INTO materias (id, licenciatura, nombre, turno, grupo, nrc, cupo, horario_lunes, horario_martes, horario_miercoles, horario_jueves, horario_viernes)
+VALUES (1, 'Ingeniería de software', 'Bases de Datos', 'Matutino', 101, 91001, 30, '9:00AM-11:00AM', '-', '9:00AM-11:00AM', '-', '9:00AM-11:00AM');
+
+INSERT INTO materias (id, licenciatura, nombre, turno, grupo, nrc, cupo, horario_lunes, horario_martes, horario_miercoles, horario_jueves, horario_viernes)
+VALUES (2, 'Ingeniería de software', 'Programación Básica', 'Vespertino', 102, 91002, 30, '-', '1:00PM-3:00PM', '-', '1:00PM-3:00PM', '-');
+
+INSERT INTO materias (id, licenciatura, nombre, turno, grupo, nrc, cupo, horario_lunes, horario_martes, horario_miercoles, horario_jueves, horario_viernes)
+VALUES (3, 'Ingeniería de software', 'Desarrollo de software', 'Matutino', 201, 91003, 30, '7:00AM-9:00AM', '-', '7:00AM-9:00AM', '-', '7:00AM-9:00AM');
+
+INSERT INTO materias (id, licenciatura, nombre, turno, grupo, nrc, cupo, horario_lunes, horario_martes, horario_miercoles, horario_jueves, horario_viernes)
+VALUES (4, 'Ingeniería de software', 'Desarrollo de Sistemas en Red', 'Vespertino', 202, 91004, 30, '-', '3:00PM-5:00PM', '-', '3:00PM-5:00PM', '-');
+
+INSERT INTO materias (id, licenciatura, nombre, turno, grupo, nrc, cupo, horario_lunes, horario_martes, horario_miercoles, horario_jueves, horario_viernes)
+VALUES (5, 'Ingeniería de software', 'Desarrollo de aplicaciones móviles', 'Matutino', 301, 91005, 30, '9:00AM-11:00AM', '-', '9:00AM-11:00AM', '-', '9:00AM-11:00AM');
+
+INSERT INTO materias (id, licenciatura, nombre, turno, grupo, nrc, cupo, horario_lunes, horario_martes, horario_miercoles, horario_jueves, horario_viernes)
+VALUES (6, 'Ingeniería de software', 'Principios de Construcción de Software', 'Vespertino', 302, 91006, 30, '-', '1:00PM-3:00PM', '-', '1:00PM-3:00PM', '-');
+
+INSERT INTO materias (id, licenciatura, nombre, turno, grupo, nrc, cupo, horario_lunes, horario_martes, horario_miercoles, horario_jueves, horario_viernes)
+VALUES (7, 'Ingeniería de software', 'Verificación y Validación de Software', 'Matutino', 401, 91007, 30, '7:00AM-9:00AM', '-', '7:00AM-9:00AM', '-', '7:00AM-9:00AM');
+
+INSERT INTO materias (id, licenciatura, nombre, turno, grupo, nrc, cupo, horario_lunes, horario_martes, horario_miercoles, horario_jueves, horario_viernes)
+VALUES (8, 'Ingeniería de software', 'Paradigmas de Programación', 'Vespertino', 402, 91008, 30, '-', '3:00PM-5:00PM', '-', '3:00PM-5:00PM', '-');
+
+INSERT INTO materias (id, licenciatura, nombre, turno, grupo, nrc, cupo, horario_lunes, horario_martes, horario_miercoles, horario_jueves, horario_viernes)
+VALUES (9, 'Ingeniería de software', 'Bases de Datos no relacionales', 'Matutino', 501, 91009, 30, '9:00AM-11:00AM', '-', '9:00AM-11:00AM', '-', '9:00AM-11:00AM');
+
+INSERT INTO materias (id, licenciatura, nombre, turno, grupo, nrc, cupo, horario_lunes, horario_martes, horario_miercoles, horario_jueves, horario_viernes)
+VALUES (10, 'Ingeniería de software', 'Inteligencia Artificial', 'Vespertino', 502, 91010, 30, '-', '1:00PM-3:00PM', '-', '1:00PM-3:00PM', '-');
+
+insert into materias values (11,'Ingeniería de software','Sistemas en red','Matutino','601','91063','30','11:00AM-1:00PM','11:00AM-1:00PM','-','11:00AM-1:00PM','-');
+insert into materias values (12,'Ingeniería de software','Bases de datos','Matutino','601','91068','30','-','9:00AM-11:00AM','-','9:00AM-11:00AM','-');
+insert into materias values (13,'Ingeniería de software','Diseño de software','Matutino','601','91060','30','7:00AM-9:00AM','-','7:00AM-9:00AM','-','7:00AM-9:00AM');
+insert into materias values (14,'Ingeniería de software','Aplicaciones','Matutino','601','91064','30','9:00AM-11:00AM','-','11:00AM-1:00PM','-','9:00AM-11:00AM');
+insert into materias values (15,'Ingeniería de software','Redes','Matutino','401','91015','30','7:00:-8:00AM','8:00AM-9:00AM','-','11:00AM-1:00PM','11:00PM-1:00PM');
+insert into materias values (16,'Ingeniería de software','Programación','Matutino','201','91012','30','11:00AM-1:00PM','11:00AM-1:00PM','-','11:00AM-1:00PM','-');
+
+INSERT INTO salones (salon, edificio, nrc) SELECT 6, 1, nrc FROM materias WHERE grupo = 601;
+
+
+
+create table Cuentas_Docente(
+   numero_personal int not null,
+   correo varchar(100),
+   contraseña varchar(100), 
+   url_imagen varchar(100),
+   primary key (numero_personal)
+	);
+
+ALTER TABLE Cuentas_Docente
+ADD CONSTRAINT FK_Cuentas_Docente_docentes
+FOREIGN KEY (numero_personal)
+REFERENCES docentes (numero_personal);
+
+INSERT INTO Docentes_Materias (numero_personal, nrc)
+SELECT d.numero_personal, m.nrc
+FROM docentes d, materias m
+WHERE d.nombres = 'Adolfo'
+LIMIT 3;
+
+
+INSERT INTO Docentes_Materias (numero_personal, nrc) SELECT d.numero_personal, m.nrc FROM docentes d, materias m WHERE d.nombres = 'Jorge Ernesto' and m.nrc = 91010;
+INSERT INTO Docentes_Materias (numero_personal, nrc) SELECT d.numero_personal, m.nrc FROM docentes d, materias m WHERE d.nombres = 'Jorge Ernesto' and m.nrc = 91005;
+INSERT INTO Docentes_Materias (numero_personal, nrc) SELECT d.numero_personal, m.nrc FROM docentes d, materias m WHERE d.nombres = 'Jorge Ernesto' and m.nrc = 91007;
+
+
+alter table materias drop column horario_lunes;
+alter table materias drop column horario_martes;
+alter table materias drop column horario_miercoles;
+alter table materias drop column horario_jueves;
+alter table materias drop column horario_viernes;
+
+UPDATE materias SET licenciatura = 'ISW' WHERE licenciatura = 'Ingeniería de software';
+
+
+
+
+
