@@ -58,11 +58,11 @@ create table Salones(
 
 /*
 create table Cuentas_Alumno(
-   id int not null,
+   matricula int REFERENCES
+   alumnos (matricula),
    correo varchar(100),
    contraseña varchar(100), 
-   url_imagen varchar(255),
-   primary key (id)
+   url_imagen varchar(255)
    );
 */   
 
@@ -87,7 +87,12 @@ create table Docentes_Materias(
 --add constraint fk_num_per foreign key (numero_personal) references docentes (numero_personal)
 --add constraint fk_nrc foreign key (nrc) references materias (nrc)
 --add constraint unique_nrc_per_num_personal UNIQUE (nrc);
-
+/*
+CREATE TABLE alumnos_materias (
+  matricula INTEGER REFERENCES alumnos (matricula),
+  nrc INTEGER REFERENCES materias (nrc)
+);
+*/
 
 /*
 insert into alumnos (id, nombres, apellidos, matricula, telefono, sexo, fechanacimiento, licenciatura) values ('1','Aldo','Torres Ramírez','20006781','123','Masculino','7 de mayo de 2002','Ingeniería de software')
