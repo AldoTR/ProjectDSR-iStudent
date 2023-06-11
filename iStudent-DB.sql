@@ -71,10 +71,15 @@ create table Cuentas_Docente(
    numero_personal int not null,
    correo varchar(100),
    contrasena varchar(100), 
-   url_imagen character varying(255),
+   url_imagen varchar(100),
    primary key (numero_personal)
 	);
 */
+
+--ALTER TABLE Cuentas_Docente
+--ADD CONSTRAINT FK_Cuentas_Docente_docentes
+--FOREIGN KEY (numero_personal)
+--REFERENCES docentes (numero_personal);
 
 /*
 create table Docentes_Materias(
