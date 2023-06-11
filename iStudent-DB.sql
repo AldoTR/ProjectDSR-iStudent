@@ -39,11 +39,6 @@ create table Materias(
 	nrc int not null,
 	cupo int not null,
 	docente varchar(40),
-	Horario_Lunes varchar(50),
-	Horario_Martes varchar(50),
-	Horario_Miercoles varchar(50),
-	Horario_Jueves varchar(50),
-	Horario_Viernes varchar(50),
 	primary key (nrc)
 	);
 */	
@@ -160,6 +155,8 @@ INSERT INTO materias values (15,'Ingeniería de software','Redes','Matutino','40
 INSERT INTO materias values (16,'Ingeniería de software','Programación','Matutino','201','91012','30','11:00AM-1:00PM','11:00AM-1:00PM','-','11:00AM-1:00PM','-');
 /*
 
+UPDATE materias SET licenciatura = 'ISW' WHERE licenciatura = 'Ingeniería de software';
+
 --select * from materias
 
 --insert into salones values ('07','01','91063')
@@ -176,6 +173,14 @@ INSERT INTO materias values (16,'Ingeniería de software','Programación','Matut
 --select * from Cuentas_Alumno
 
 --insert into Docentes_Materias values ('101','91063')
+--insert into Docentes_Materias (numero_personal, nrc)
+--insert into Docentes_Materias (numero_personal, nrc) SELECT d.numero_personal, m.nrc FROM docentes d, materias m WHERE d.nombres = 'Jorge Ernesto' and m.nrc = 91010;
+--SELECT d.numero_personal, m.nrc
+--FROM docentes d, materias m
+--WHERE d.nombres = 'Adolfo'
+--LIMIT 3;
+-- insert into Docentes_Materias (numero_personal, nrc) SELECT d.numero_personal, m.nrc FROM docentes d, materias m WHERE d.nombres = 'Jorge Ernesto' and m.nrc = 91005;
+-- insert into Docentes_Materias (numero_personal, nrc) SELECT d.numero_personal, m.nrc FROM docentes d, materias m WHERE d.nombres = 'Jorge Ernesto' and m.nrc = 91007;
 --select * from Docentes_Materias
 
 --insert into Cuentas_Docente values ('101', 'JorgeGD@uv.mx','JorgeContraseña','enlace_imagen')
