@@ -111,12 +111,44 @@ insert into docentes values ('06','Adolfo','Rodriguez Parada',1918671970,2713456
 
 --select * from docentes
 
---insert into materias values ('01','Ingeniería de software','Sistemas en red','Matutino','601','91063','30','Jorge Ernesto','11:00AM-1:00PM','11:00AM-1:00PM','-','11:00AM-1:00PM','-')
---insert into materias values ('02','Ingeniería de software','Bases de datos','Matutino','601','91068','30','Adolfo','-','9:00AM-11:00AM','-','9:00AM-11:00AM','-')
---insert into materias values ('03','Ingeniería de software','Diseño de software','Matutino','601','91060','30','Martín','7:00AM-9:00AM','-','7:00AM-9:00AM','-','7:00AM-9:00AM')
---insert into materias values ('04','Ingeniería de software','Aplicaciones','Matutino','601','91064','30','Gabriel','9:00AM-11:00AM','-','11:00AM-1:00PM','-','9:00AM-11:00AM')
---insert into materias values ('05','Ingeniería de software','Redes','Matutino','401','91015','30','Ricardo','7:00:-8:00AM','8:00AM-9:00AM','-','11:00AM-1:00PM','11:00PM-1:00PM')
---insert into materias values ('06','Ingeniería de software','Programación','Matutino','201','91001','30','Adolfo','11:00AM-1:00PM','11:00AM-1:00PM','-','11:00AM-1:00PM','-')
+/*
+INSERT INTO materias (id, licenciatura, nombre, turno, grupo, nrc, cupo, horario_lunes, horario_martes, horario_miercoles, horario_jueves, horario_viernes)
+VALUES (1, 'Ingeniería de software', 'Bases de Datos', 'Matutino', 101, 91001, 30, '9:00AM-11:00AM', '-', '9:00AM-11:00AM', '-', '9:00AM-11:00AM');
+
+INSERT INTO materias (id, licenciatura, nombre, turno, grupo, nrc, cupo, horario_lunes, horario_martes, horario_miercoles, horario_jueves, horario_viernes)
+VALUES (2, 'Ingeniería de software', 'Programación Básica', 'Vespertino', 102, 91002, 30, '-', '1:00PM-3:00PM', '-', '1:00PM-3:00PM', '-');
+
+INSERT INTO materias (id, licenciatura, nombre, turno, grupo, nrc, cupo, horario_lunes, horario_martes, horario_miercoles, horario_jueves, horario_viernes)
+VALUES (3, 'Ingeniería de software', 'Desarrollo de software', 'Matutino', 201, 91003, 30, '7:00AM-9:00AM', '-', '7:00AM-9:00AM', '-', '7:00AM-9:00AM');
+
+INSERT INTO materias (id, licenciatura, nombre, turno, grupo, nrc, cupo, horario_lunes, horario_martes, horario_miercoles, horario_jueves, horario_viernes)
+VALUES (4, 'Ingeniería de software', 'Desarrollo de Sistemas en Red', 'Vespertino', 202, 91004, 30, '-', '3:00PM-5:00PM', '-', '3:00PM-5:00PM', '-');
+
+INSERT INTO materias (id, licenciatura, nombre, turno, grupo, nrc, cupo, horario_lunes, horario_martes, horario_miercoles, horario_jueves, horario_viernes)
+VALUES (5, 'Ingeniería de software', 'Desarrollo de aplicaciones móviles', 'Matutino', 301, 91005, 30, '9:00AM-11:00AM', '-', '9:00AM-11:00AM', '-', '9:00AM-11:00AM');
+
+INSERT INTO materias (id, licenciatura, nombre, turno, grupo, nrc, cupo, horario_lunes, horario_martes, horario_miercoles, horario_jueves, horario_viernes)
+VALUES (6, 'Ingeniería de software', 'Principios de Construcción de Software', 'Vespertino', 302, 91006, 30, '-', '1:00PM-3:00PM', '-', '1:00PM-3:00PM', '-');
+
+INSERT INTO materias (id, licenciatura, nombre, turno, grupo, nrc, cupo, horario_lunes, horario_martes, horario_miercoles, horario_jueves, horario_viernes)
+VALUES (7, 'Ingeniería de software', 'Verificación y Validación de Software', 'Matutino', 401, 91007, 30, '7:00AM-9:00AM', '-', '7:00AM-9:00AM', '-', '7:00AM-9:00AM');
+
+INSERT INTO materias (id, licenciatura, nombre, turno, grupo, nrc, cupo, horario_lunes, horario_martes, horario_miercoles, horario_jueves, horario_viernes)
+VALUES (8, 'Ingeniería de software', 'Paradigmas de Programación', 'Vespertino', 402, 91008, 30, '-', '3:00PM-5:00PM', '-', '3:00PM-5:00PM', '-');
+
+INSERT INTO materias (id, licenciatura, nombre, turno, grupo, nrc, cupo, horario_lunes, horario_martes, horario_miercoles, horario_jueves, horario_viernes)
+VALUES (9, 'Ingeniería de software', 'Bases de Datos no convencionales', 'Matutino', 501, 91009, 30, '9:00AM-11:00AM', '-', '9:00AM-11:00AM', '-', '9:00AM-11:00AM');
+
+INSERT INTO materias (id, licenciatura, nombre, turno, grupo, nrc, cupo, horario_lunes, horario_martes, horario_miercoles, horario_jueves, horario_viernes)
+VALUES (10, 'Ingeniería de software', 'Inteligencia Artificial', 'Vespertino', 502, 91010, 30, '-', '1:00PM-3:00PM', '-', '1:00PM-3:00PM', '-');
+
+INSERT INTO materias values (11,'Ingeniería de software','Sistemas en red','Matutino','601','91063','30','11:00AM-1:00PM','11:00AM-1:00PM','-','11:00AM-1:00PM','-');
+INSERT INTO materias values (12,'Ingeniería de software','Bases de datos','Matutino','601','91068','30','-','9:00AM-11:00AM','-','9:00AM-11:00AM','-');
+INSERT INTO materias values (13,'Ingeniería de software','Diseño de software','Matutino','601','91060','30','7:00AM-9:00AM','-','7:00AM-9:00AM','-','7:00AM-9:00AM');
+INSERT INTO materias values (14,'Ingeniería de software','Aplicaciones','Matutino','601','91064','30','9:00AM-11:00AM','-','11:00AM-1:00PM','-','9:00AM-11:00AM');
+INSERT INTO materias values (15,'Ingeniería de software','Redes','Matutino','401','91015','30','7:00:-8:00AM','8:00AM-9:00AM','-','11:00AM-1:00PM','11:00PM-1:00PM');
+INSERT INTO materias values (16,'Ingeniería de software','Programación','Matutino','201','91012','30','11:00AM-1:00PM','11:00AM-1:00PM','-','11:00AM-1:00PM','-');
+/*
 
 --select * from materias
 
@@ -126,6 +158,7 @@ insert into docentes values ('06','Adolfo','Rodriguez Parada',1918671970,2713456
 --insert into salones values ('07','01','91064')
 --insert into salones values ('07','01','91015')
 --insert into salones values ('07','01','91001')
+--insert into salones (salon, edificio, nrc) SELECT 6, 1, nrc FROM materias WHERE grupo = 601;
 
 --select * from salones
 
